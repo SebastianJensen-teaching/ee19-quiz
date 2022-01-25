@@ -3,8 +3,10 @@ let form = document.querySelector("form");
 let resultBox = document.querySelector(".result-box");
 let resultHeading = document.querySelector(".result-box h2");
 let resultP = document.querySelector(".result-box p");
+let tryAgain = document.querySeelctor(".result-box button")
 
 form.addEventListener("submit", handleForm);
+tryAgain.addEventListener("click", resetForm);
 
 function handleForm(event) {
     let totalPoints = 0;
@@ -31,4 +33,10 @@ function handleForm(event) {
     }
 
     resultP.innerHTML = `You got ${totalPoints}/3 points correct!`;
+}
+
+function resetForm() {
+    resultBox.classList.toggle("hidden");
+    form.classList.toggle("hidden");
+    form.reset();
 }
