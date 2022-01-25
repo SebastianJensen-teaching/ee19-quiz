@@ -3,7 +3,7 @@ let form = document.querySelector("form");
 let resultBox = document.querySelector(".result-box");
 let resultHeading = document.querySelector(".result-box h2");
 let resultP = document.querySelector(".result-box p");
-let tryAgain = document.querySeelctor(".result-box button")
+let tryAgain = document.querySelector(".result-box button")
 
 form.addEventListener("submit", handleForm);
 tryAgain.addEventListener("click", resetForm);
